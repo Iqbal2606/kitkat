@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Secret Love Wish ❤️</title>
+
+<style>
+
+/* =====================================================
+   BASIC
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    color: white;
+    overflow-x: hidden;
+
+    /* Chocolate + red gradient */
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 80, 80, .35),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(120, 0, 0, .45),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #180205,
+            #5c0710,
+            #a50d1c,
+            #4b050c,
+            #160104
+        );
+
+    background-size: 200% 200%;
+
+    animation: backgroundMove 10s ease infinite;
+}
+
+@keyframes backgroundMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =====================================================
+   SECRET PASSWORD SCREEN
+===================================================== */
+
+#lockScreen {
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 10000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 0, 3, .95),
+            rgba(100, 5, 15, .9)
+        );
+
+    transition: 1s;
+}
+
+
+/* Chocolate pieces behind password */
+
+.chocolate-piece {
+
+    position: absolute;
+
+    width: 110px;
+    height: 45px;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b1208,
+            #7b2915,
+            #351006
+        );
+
+    border: 2px solid
+        rgba(255, 255, 255, .12);
+
+    box-shadow:
+        inset 0 3px 4px
+        rgba(255,255,255,.15),
+
+        0 10px 25px
+        rgba(0,0,0,.4);
+
+    opacity: .6;
+
+    animation:
+        chocolateFloat 6s ease-in-out infinite;
+}
+
+.chocolate-piece::before,
+.chocolate-piece::after {
+
+    content: "";
+
+    position: absolute;
+
+    background:
+        rgba(20, 3, 1, .45);
+
+    border-radius: 4px;
+}
+
+.chocolate-piece::before {
+
+    width: 45%;
+    height: 80%;
+
+    left: 5%;
+    top: 10%;
+}
+
+.chocolate-piece::after {
+
+    width: 45%;
+    height: 80%;
+
+    right: 5%;
+    top: 10%;
+}
+
+
+.chocolate1 {
+    left: 5%;
+    top: 15%;
+}
+
+.chocolate2 {
+    right: 5%;
+    top: 30%;
+    animation-delay: 1s;
+}
+
+.chocolate3 {
+    left: 8%;
+    bottom: 15%;
+    animation-delay: 2s;
+}
+
+.chocolate4 {
+    right: 8%;
+    bottom: 12%;
+    animation-delay: 3s;
+}
+
+
+@keyframes chocolateFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(-8deg);
+    }
+
+    50% {
+        transform:
+            translateY(-25px)
+            rotate(8deg);
+    }
+}
+
+
+/* Password box */
+
+.lock-box {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 430px;
+
+    padding: 42px 25px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        rgba(70, 10, 15, .75);
+
+    border:
+        1px solid
+        rgba(255, 120, 120, .3);
+
+    backdrop-filter:
+        blur(18px);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.65);
+
+    z-index: 10;
+}
+
+
+/* Lock */
+
+.lock {
+
+    font-size: 65px;
+
+    margin-bottom: 12px;
+
+    animation:
+        heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+.lock-box h1 {
+
+    font-size:
+        clamp(2rem, 9vw, 3.4rem);
+
+    color: #fff;
+
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 0 20px
+        rgba(255,80,80,.7);
+}
+
+
+.lock-box p {
+
+    color: #ffd8d8;
+
+    line-height: 1.6;
+}
+
+
+/* KitKat style chocolate label */
+
+.chocolate-label {
+
+    display: inline-block;
+
+    margin:
+        20px 0;
+
+    padding:
+        8px 20px;
+
+    border-radius: 5px;
+
+    background:
+        #b51220;
+
+    border:
+        2px solid #f3c3a8;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 1.2rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transform: rotate(-2deg);
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,.4);
+}
+
+
+/* Hint */
+
+.hint {
+
+    margin: 20px 0;
+
+    padding: 17px;
+
+    border-radius: 17px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    color: #ffe1e1;
+
+    line-height: 1.6;
+}
+
+
+.hint strong {
+
+    color: #ffb3b3;
+}
+
+
+/* Input */
+
+.password-input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border-radius: 50px;
+
+    border:
+        1px solid
+        rgba(255,130,130,.5);
+
+    outline: none;
+
+    background:
+        rgba(0,0,0,.35);
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 1rem;
+}
+
+
+.password-input::placeholder {
+
+    color:
+        rgba(255,255,255,.55);
+}
+
+
+/* Unlock button */
+
+.unlock-btn {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            45deg,
+            #b51220,
+            #e32938
+        );
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.4);
+
+    transition: .3s;
+}
+
+
+.unlock-btn:hover {
+
+    transform:
+        translateY(-3px)
+        scale(1.02);
+}
+
+
+#error {
+
+    display: none;
+
+    color: #ffb0b0;
+
+    margin-top: 15px;
+
+    animation:
+        shake .3s;
+}
+
+
+@keyframes shake {
+
+    0%,100% {
+        transform:
+            translateX(0);
+    }
+
+    25% {
+        transform:
+            translateX(-8px);
+    }
+
+    75% {
+        transform:
+            translateX(8px);
+    }
+}
+
+
+/* =====================================================
+   MAIN LOVE WEBSITE
+===================================================== */
+
+#website {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding:
+        55px 18px;
+
+    text-align: center;
+}
+
+
+.container {
+
+    max-width: 780px;
+
+    margin: auto;
+}
+
+
+/* Small heading */
+
+.small-title {
+
+    color:
+        #ffc2c2;
+
+    letter-spacing: 4px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: .75rem;
+
+    text-transform: uppercase;
+}
+
+
+/* Main title */
+
+.main-title {
+
+    font-size:
+        clamp(
+            2.7rem,
+            11vw,
+            6rem
+        );
+
+    margin: 15px 0;
+
+    color: white;
+
+    text-shadow:
+        0 0 25px
+        rgba(255,80,80,.7);
+}
+
+
+.subtitle {
+
+    color:
+        #ffdada;
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+
+    font-style: italic;
+}
+
+
+/* =====================================================
+   ANIMATED CHOCOLATE BAR
+===================================================== */
+
+.chocolate-bar {
+
+    position: relative;
+
+    width:
+        min(340px, 85vw);
+
+    height: 105px;
+
+    margin:
+        55px auto 45px;
+
+    padding: 12px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 7px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #351006,
+            #6e2111,
+            #3a1007
+        );
+
+    border:
+        3px solid
+        #c38b62;
+
+    box-shadow:
+        0 20px 45px
+        rgba(0,0,0,.55),
+
+        inset 0 3px 5px
+        rgba(255,255,255,.15);
+
+    animation:
+        chocolateBounce 3s ease-in-out infinite;
+}
+
+
+.chocolate-square {
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7d3018,
+            #401307
+        );
+
+    box-shadow:
+        inset 2px 2px 5px
+        rgba(255,255,255,.12),
+
+        inset -3px -3px 5px
+        rgba(0,0,0,.4);
+}
+
+
+@keyframes chocolateBounce {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(-1deg);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            rotate(1deg);
+    }
+}
+
+
+/* =====================================================
+   HEART
+===================================================== */
+
+.big-heart {
+
+    width: 175px;
+    height: 175px;
+
+    margin:
+        10px auto 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid
+        rgba(255,180,180,.3);
+
+    box-shadow:
+        0 0 80px
+        rgba(255,50,70,.3);
+
+    animation:
+        heartPulse 2s infinite;
+}
+
+
+.big-heart span {
+
+    font-size: 85px;
+}
+
+
+@keyframes heartPulse {
+
+    50% {
+
+        transform:
+            scale(1.1);
+
+        box-shadow:
+            0 0 110px
+            rgba(255,50,70,.55);
+    }
+}
+
+
+/* =====================================================
+   LOVE LETTER
+===================================================== */
+
+.letter {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8f3,
+            #ffece8
+        );
+
+    color: #471b22;
+
+    padding:
+        40px 30px;
+
+    border-radius: 20px;
+
+    text-align: left;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.4);
+
+    position: relative;
+}
+
+
+.letter::after {
+
+    content: "❤️";
+
+    position: absolute;
+
+    right: 20px;
+    top: 15px;
+
+    font-size: 25px;
+}
+
+
+.letter h3 {
+
+    text-align: center;
+
+    color: #a31626;
+
+    font-size: 2rem;
+
+    margin-bottom: 25px;
+}
+
+
+.letter p {
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+}
+
+
+.signature {
+
+    text-align: right;
+
+    margin-top: 30px;
+
+    color: #a31626;
+
+    font-style: italic;
+
+    font-size: 1.2rem;
+}
+
+
+/* =====================================================
+   FINAL SURPRISE
+===================================================== */
+
+.surprise {
+
+    margin-top: 60px;
+
+    padding:
+        30px 20px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    backdrop-filter:
+        blur(10px);
+}
+
+
+.surprise button {
+
+    padding:
+        15px 30px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        #fff;
+
+    color:
+        #a31626;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    transition: .3s;
+}
+
+
+.surprise button:hover {
+
+    transform:
+        scale(1.07);
+}
+
+
+.final-message {
+
+    display: none;
+
+    margin-top: 30px;
+
+    animation:
+        appear 1s ease;
+}
+
+
+.final-message h2 {
+
+    color: #fff;
+
+    font-size:
+        clamp(2rem, 8vw, 3rem);
+
+    text-shadow:
+        0 0 25px
+        rgba(255,100,100,.7);
+}
+
+
+.final-message p {
+
+    margin-top: 15px;
+
+    color:
+        #ffe0e0;
+
+    line-height: 1.8;
+}
+
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =====================================================
+   FLOATING CHOCOLATE
+===================================================== */
+
+.floating-chocolate {
+
+    position: fixed;
+
+    bottom: -60px;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    width: 65px;
+
+    height: 25px;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #381006,
+            #7c2b13,
+            #3b0e05
+        );
+
+    border:
+        1px solid
+        rgba(255,200,150,.4);
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,.4);
+
+    animation:
+        chocolateUp 7s linear forwards;
+}
+
+
+@keyframes chocolateUp {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .8;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.floating-heart {
+
+    position: fixed;
+
+    bottom: -40px;
+
+    pointer-events: none;
+
+    z-index: 100;
+
+    animation:
+        heartUp 6s linear forwards;
+}
+
+
+@keyframes heartUp {
+
+    0% {
+
+        transform:
+            translateY(0)
+            scale(.7);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            scale(1.3)
+            rotate(25deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+.confetti {
+
+    position: fixed;
+
+    top: -20px;
+
+    width: 9px;
+    height: 9px;
+
+    z-index: 99999;
+
+    pointer-events: none;
+
+    animation:
+        confettiFall 4s linear forwards;
+}
+
+
+@keyframes confettiFall {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    #website {
+        padding:
+            40px 14px;
+    }
+
+
+    .lock-box {
+        padding:
+            35px 20px;
+    }
+
+
+    .letter {
+        padding:
+            30px 20px;
+    }
+
+
+    .letter p {
+        font-size: .98rem;
+        line-height: 1.8;
+    }
+
+
+    .big-heart {
+
+        width: 145px;
+        height: 145px;
+    }
+
+
+    .big-heart span {
+        font-size: 70px;
+    }
+
+
+    .chocolate-bar {
+
+        height: 85px;
+
+        padding: 9px;
+
+        gap: 5px;
+    }
+
+
+    .surprise {
+        padding:
+            25px 15px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PASSWORD SCREEN
+===================================================== -->
+
+<section id="lockScreen">
+
+
+    <!-- Animated chocolate pieces -->
+
+    <div class="chocolate-piece chocolate1"></div>
+
+    <div class="chocolate-piece chocolate2"></div>
+
+    <div class="chocolate-piece chocolate3"></div>
+
+    <div class="chocolate-piece chocolate4"></div>
+
+
+    <div class="lock-box">
+
+
+        <div class="lock">
+            🔐
+        </div>
+
+
+        <h1>
+            Secret Love
+        </h1>
+
+
+        <p>
+            I made something special
+            just for you... ❤️
+        </p>
+
+
+        <!-- Chocolate label -->
+
+       
+
+
+        <!-- HINT -->
+
+        <div class="hint">
+
+            💡 <strong>Password Hint</strong>
+
+            <br><br>
+
+            "What is my
+            <b>favorite chocolate?</b>" 🍫
+
+        </div>
+
+
+        <!-- PASSWORD -->
+
+        <input
+            type="password"
+            id="password"
+            class="password-input"
+            placeholder="Enter the secret password"
+        >
+
+
+        <button
+            class="unlock-btn"
+            onclick="unlock()">
+
+            🔓 Unlock My Love
+
+        </button>
+
+
+        <div id="error">
+
+            Hmm... that's not it.
+            Try again ❤️
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN LOVE WEBSITE
+===================================================== -->
+
+<section id="website">
+
+<div class="container">
+
+
+    <div class="small-title">
+
+        A Little Secret For You
+
+    </div>
+
+
+    <h1 class="main-title">
+
+        I Love You ❤️
+
+    </h1>
+
+
+    <p class="subtitle">
+
+        You found the secret...
+        <br>
+
+        and now you have my heart. 💕
+
+    </p>
+
+
+    <!-- Animated Chocolate Bar -->
+
+    <div class="chocolate-bar">
+
+        <div class="chocolate-square"></div>
+        <div class="chocolate-square"></div>
+        <div class="chocolate-square"></div>
+        <div class="chocolate-square"></div>
+
+    </div>
+
+
+    <!-- Heart -->
+
+    <div class="big-heart">
+
+        <span>
+            ❤️
+        </span>
+
+    </div>
+
+
+    <!-- Love Letter -->
+
+    <div class="letter">
+
+        <h3>
+            My Secret kit kat Message 💌
+        </h3>
+
+
+        <p>
+
+            If you are reading this,
+            it means you successfully
+            unlocked my little secret.
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            Just like a KitKat makes
+            an ordinary break a little
+            more special...
+
+            you make my ordinary days
+            feel special too. ❤️
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            You are one of the sweetest
+            parts of my life.
+
+            Thank you for every smile,
+            every conversation,
+            every little moment,
+            and simply for being you.
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            If I had one wish,
+            I would wish for many more
+            beautiful moments with you.
+
+        </p>
+
+
+        <div class="signature">
+
+            With all my love  from your BABYYYYY❤️
+
+        </div>
+
+    </div>
+
+
+    <!-- Final surprise -->
+
+    <div class="surprise">
+
+        <button onclick="showFinalMessage()">
+
+            🍫 Open One More Surprise ❤️
+
+        </button>
+
+
+        <div
+            class="final-message"
+            id="finalMessage">
+
+            <h2>
+
+                You Are My Favorite ❤️
+
+            </h2>
+
+
+            <p>
+
+                Favorite person.
+
+                <br>
+
+                Favorite smile.
+
+                <br>
+
+                Favorite memories.
+
+                <br>
+
+                Favorite forever one.
+
+
+                <br>
+                <br>
+
+                My princess.
+
+
+                <br>
+
+
+                Favorite everything. 💕
+
+                <br><br>
+
+                And yes...
+
+                <br>
+
+                <strong>
+                    KitKat is your favorite chocolate,
+                    but YOU are my favorite person. ❤️
+                </strong>
+
+                <br><br>
+
+                I love you. ❤️
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<script>
+
+/* =====================================================
+   PASSWORD
+===================================================== */
+
+/*
+   PASSWORD:
+   kit kat
+
+   The code ignores capital letters
+   and extra spaces.
+*/
+
+const correctPassword = "kit kat";
+
+
+/* =====================================================
+   UNLOCK
+===================================================== */
+
+function unlock() {
+
+    const input =
+        document
+        .getElementById("password")
+        .value
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, " ");
+
+
+    const error =
+        document.getElementById("error");
+
+
+    if (input === correctPassword) {
+
+
+        /* Hide password screen */
+
+        document
+        .getElementById("lockScreen")
+        .style.opacity = "0";
+
+
+        setTimeout(() => {
+
+            document
+            .getElementById("lockScreen")
+            .style.display = "none";
+
+
+            document
+            .getElementById("website")
+            .style.display = "block";
+
+
+        }, 1000);
+
+
+        /* BIG CONFETTI */
+
+        for (
+            let i = 0;
+            i < 180;
+            i++
+        ) {
+
+            setTimeout(
+                createConfetti,
+                i * 12
+            );
+
+        }
+
+    }
+
+    else {
+
+        error.style.display = "block";
+
+    }
+
+}
+
+
+/* =====================================================
+   ENTER KEY
+===================================================== */
+
+document
+.getElementById("password")
+.addEventListener(
+    "keypress",
+    function(event) {
+
+        if (event.key === "Enter") {
+
+            unlock();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function createConfetti() {
+
+    const confetti =
+        document.createElement("div");
+
+
+    confetti.className =
+        "confetti";
+
+
+    confetti.style.left =
+        Math.random() * 100 + "vw";
+
+
+    confetti.style.width =
+        Math.random() * 8 + 5 + "px";
+
+
+    confetti.style.height =
+        Math.random() * 8 + 5 + "px";
+
+
+    confetti.style.background =
+        [
+
+            "#ffffff",
+            "#ffd166",
+            "#ffb3b3",
+            "#ff4057",
+            "#c77dff",
+            "#f4a261"
+
+        ][
+            Math.floor(
+                Math.random() * 6
+            )
+        ];
+
+
+    confetti.style.animationDuration =
+        Math.random() * 2 + 2.5 + "s";
+
+
+    document.body.appendChild(confetti);
+
+
+    setTimeout(() => {
+
+        confetti.remove();
+
+    }, 5000);
+
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+
+    heart.className =
+        "floating-heart";
+
+
+    heart.innerHTML =
+        [
+
+            "❤️",
+            "💕",
+            "💗",
+            "💖",
+            "💓"
+
+        ][
+            Math.floor(
+                Math.random() * 5
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+
+    heart.style.fontSize =
+        Math.random() * 20 + 15 + "px";
+
+
+    heart.style.animationDuration =
+        Math.random() * 3 + 4 + "s";
+
+
+    document.body.appendChild(heart);
+
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    }, 7000);
+
+}
+
+
+setInterval(
+    createHeart,
+    700
+);
+
+
+/* =====================================================
+   FLOATING CHOCOLATES
+===================================================== */
+
+function createChocolate() {
+
+    const chocolate =
+        document.createElement("div");
+
+
+    chocolate.className =
+        "floating-chocolate";
+
+
+    chocolate.style.left =
+        Math.random() * 100 + "vw";
+
+
+    chocolate.style.animationDuration =
+        Math.random() * 3 + 5 + "s";
+
+
+    document.body.appendChild(chocolate);
+
+
+    setTimeout(() => {
+
+        chocolate.remove();
+
+    }, 8000);
+
+}
+
+
+setInterval(
+    createChocolate,
+    1300
+);
+
+
+/* =====================================================
+   FINAL MESSAGE
+===================================================== */
+
+function showFinalMessage() {
+
+    document
+    .getElementById("finalMessage")
+    .style.display = "block";
+
+
+    /* More confetti */
+
+    for (
+        let i = 0;
+        i < 120;
+        i++
+    ) {
+
+        setTimeout(
+            createConfetti,
+            i * 18
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
+
